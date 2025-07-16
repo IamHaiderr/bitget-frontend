@@ -24,22 +24,6 @@ const PhoneMockup = styled.div`
   max-height: 640px;
 `;
 
-const Content = styled.div`
-  max-width: 400px;
-`;
-
-const Heading = styled.h2`
-  color: ${({ theme }) => theme.colors.primary};
-  font-size: 2rem;
-  margin-bottom: 16px;
-`;
-
-const Description = styled.p`
-  color: ${({ theme }) => theme.colors.text};
-  font-size: 1.1rem;
-  margin-bottom: 24px;
-`;
-
 const Button = styled.button`
   background: ${({ theme }) => theme.colors.primary};
   color: #111315;

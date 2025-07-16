@@ -37,7 +37,7 @@ const IconBtn = styled.button`
   align-items: center;
 `;
 
-const SignupNavbar = () => (
+const LoginNavbar = () => (
   <NavbarContainer>
     <Link href="/" passHref legacyBehavior>
       <Logo as="a">
@@ -47,9 +47,6 @@ const SignupNavbar = () => (
       </Logo>
     </Link>
     <RightIcons>
-      <IconBtn title="App">
-        <span role="img" aria-label="app">📱</span>
-      </IconBtn>
       <IconBtn title="Globe">
         <span role="img" aria-label="globe">🌐</span>
       </IconBtn>
@@ -57,4 +54,4 @@ const SignupNavbar = () => (
   </NavbarContainer>
 );
 
-export default SignupNavbar; 
+export default LoginNavbar; 

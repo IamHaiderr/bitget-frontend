@@ -71,6 +71,7 @@ const Button = styled.button`
   font-size: 1rem;
   transition: box-shadow 0.18s, transform 0.18s, background 0.18s;
   margin-right: 18px;
+  text-decoration: none;
   &:last-child {
     margin-right: 32px;
     background: linear-gradient(90deg, #00E1A2 60%, #00bfae 100%);
@@ -87,14 +88,18 @@ const Button = styled.button`
   &.signup-btn {
     margin-right: 86px;
   }
+  &[href] {
+    text-decoration: none;
+    color: #111315;
+  }
 `;
 
 const Navbar = () => (
   <NavbarContainer>
     <Logo>Bitget</Logo>
     <NavLinks>
-      <NavLink>Home</NavLink>
-      <NavLink>Markets</NavLink>
+      <Link href="/" passHref legacyBehavior><NavLink as="a">Home</NavLink></Link>
+      <Link href="/markets" passHref legacyBehavior><NavLink as="a">Markets</NavLink></Link>
       <NavLink>Futures</NavLink>
       <NavLink>Copy Trade</NavLink>
       <NavLink>Buy Crypto</NavLink>
@@ -102,7 +107,7 @@ const Navbar = () => (
       <NavLink>More</NavLink>
     </NavLinks>
     <Actions>
-      <Button>Login</Button>
+      <Link href="/login" passHref legacyBehavior><Button as="a">Login</Button></Link>
       <Link href="/signup" passHref legacyBehavior><Button as="a" className="signup-btn">Sign Up</Button></Link>
       {/* Mobile menu icon placeholder */}
       <span style={{ fontSize: 24, cursor: 'pointer' }}>☰</span>

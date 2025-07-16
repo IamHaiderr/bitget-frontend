@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 const Section = styled.section`
   padding: 48px 32px;
@@ -31,6 +32,7 @@ const QRRow = styled.div`
   display: flex;
   align-items: center;
   gap: 32px;
+  margin-top: 40px;
 `;
 
 const QRCode = styled.div`
@@ -78,7 +80,9 @@ const TradingChartSection = () => (
       />
     </ChartImage>
     <QRRow>
-      <QRCode>QR</QRCode>
+      <QRCode>
+        <Image src="/qr.png" alt="QR code" width={64} height={64} />
+      </QRCode>
       <AppIcons>
         <AppIcon></AppIcon>
         <AppIcon>▶</AppIcon>

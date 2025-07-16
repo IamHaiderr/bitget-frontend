@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import SignupNavbar from '../components/SignupNavbar';
+import Link from 'next/link';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -26,15 +27,6 @@ const LeftCol = styled.div`
   justify-content: flex-start;
   padding: 36px 0 56px 5vw;
   min-width: 380px;
-`;
-
-const Logo = styled.div`
-  font-size: 2rem;
-  font-weight: bold;
-  color: #00E1A2;
-  display: flex;
-  align-items: center;
-  margin-bottom: 56px;
 `;
 
 const CnHeading = styled.div`
@@ -374,7 +366,7 @@ export default function SignupPage() {
               </SocialRow>
               <LoginLink>
                 Already have an account?
-                <a href="#">Log in</a>
+                <Link href="/login">Log in</Link>
               </LoginLink>
             </Card>
           </RightCol>
